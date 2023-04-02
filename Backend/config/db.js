@@ -1,13 +1,12 @@
-const sequelize = require(sequelize);
+import { Sequelize } from 'sequelize';
 
-const dbInstance = new sequelize({
-    host: "localhost",
-    port: 3306,
-    username: "root",
-    password: "password",
-    database: "roteiosvianenses",
-    dialect: "mysql",
-})
+const sequelize = new Sequelize('roteirosvianenses', 'root', 'root', {
+  host: 'localhost',
+  dialect: 'mysql'
+});
 
 
-export default dbInstance;
+export default {
+  sequelize,
+  Sequelize
+};
