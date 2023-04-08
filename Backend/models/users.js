@@ -25,10 +25,6 @@ const users = dbInstance.define('users', {
         type: sequelize.STRING,
         allowNull: true
     },
-    num_tel: {
-        type: sequelize.STRING,
-        allowNull: true
-    },
     user_type_id: {
         type: sequelize.INTEGER,
         references: {

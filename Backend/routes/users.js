@@ -1,6 +1,10 @@
-import Router from 'koa-router';
-import { User } from '../models';
+import Router from 'express';
+import { createUser } from '../controllers/users';
 
-const userRoutes = new Router();
+const userRoutes = Router();
 
-userRoutes.post("/createUser", createUser)
+userRoutes.post('/', createUser);
+
+
+
+export default userRoutes;
